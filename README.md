@@ -1,4 +1,4 @@
-# katherineandgrif
+# katherineandgrif.github.io
 This repository generates Katherine &amp; Grif's wedding website.
 
-You can view the site live here > http://katherineandgrif.github.io
+You can view the site live here > https://katherineandgrif.github.io
