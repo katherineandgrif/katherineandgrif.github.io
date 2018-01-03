@@ -557,6 +557,14 @@
 									// Initialize momentum interval.
 										if (settings.dragging.momentum > 0) {
 
+									// Momentum is NaN? Bail.
+                                        if (isNaN(m)) {
+
+                                            clearInterval(momentumIntervalId);
+                                            return;
+
+                                            }
+
 											m = velocity;
 
 											momentumIntervalId = setInterval(function() {
