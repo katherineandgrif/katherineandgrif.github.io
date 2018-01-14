@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body>
 
 		<!-- Page Wrapper -->
@@ -84,7 +85,7 @@
 
 						<!-- Map -->
 							<section class="panel center">
-								<div class="content span-4-5">
+								<div class="content span-4-5 map-container">
 									<iframe src="https://www.google.com/maps/d/embed?mid=1vQJR6b-VdKGQ-bNB2nxcO76OwU8WTXFG&hl=en" frameborder="0" width="100%" height="100%" style="min-height:450px"></iframe>
 								</div>
 							</section>
@@ -149,7 +150,7 @@
 								</div>
 							</section>
 
-						<!-- Panel -->
+						<!-- K&G photo gallery -->
 							<section class="panel">
 								<div class="gallery">
 									<div class="group span-3">
@@ -230,6 +231,23 @@
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- for disabling weird google maps scroll grab -->
+	
+			<script>
+			$('.map-container')
+				.click(function(){
+						$(this).find('iframe').addClass('clicked')})
+				.mouseleave(function(){
+						$(this).find('iframe').removeClass('clicked')});
+			</script>
+			<style>
+			.map-container iframe{
+				pointer-events: none;
+			}
+			.map-container iframe.clicked{
+				pointer-events: auto;
+			}
+			</style>
 
 	</body>
 </html>
